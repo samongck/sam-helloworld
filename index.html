@@ -30,38 +30,53 @@
 </head>
  
 <body>
-    <button onclick="onClick(this)" id="button1">Button 1</button>
-    <button onclick="onClick(this)" id="button2">Button 2</button>
+    <button onclick="onClick(this)" id="button1">User 1</button>
+    <button onclick="onClick(this)" id="button2">User 2</button>
     <form action="" id="form1">
         <fieldset>
             <legend>Personal information form 1:</legend> First name:
             <br>
-            <input type="text" name="firstname" value="Mickey">
+            <input type="text" name="firstname" value="Mickey" id="name1">
             <br> Last name:
             <br>
-            <input type="text" name="lastname" value="Mouse">
+            <input type="text" name="lastname" value="Mouse" id="name2">
             <br>
             <br>
-            <input type="submit" value="Submit"> </fieldset>
+            <input type="submit" value="Submit" onclick="show_alert1();"> </fieldset>
     </form>
     <form action="" id="form2">
         <fieldset>
             <legend>Personal information form 2:</legend> First name:
             <br>
-            <input type="text" name="firstname" value="Mickey">
+            <input type="text" name="firstname" value="Mickey" id="name3">
             <br> Last name:
             <br>
-            <input type="text" name="lastname" value="Mouse">
+            <input type="text" name="lastname" value="Mouse" id="name4">
             <br>
             <br>
-            <input type="submit" value="Submit"> </fieldset>
+            <input type="submit" value="Submit" onclick="show_alert2();"> </fieldset>
     </form>
 </body>
 <script>
     function onClick(x) {
         if (x.id === 'button1') document.getElementById("form1").style.visibility = "visible";
         if (x.id === 'button2') document.getElementById("form2").style.visibility = "visible";
-    }
+    }	
+	
+function show_alert1() {
+	var name1 = document.getElementById('name1').value;
+	var name2 = document.getElementById('name2').value;
+	return alert("Thank You For Submitting " + name1 + " " + name2);
+	
+}
+
+function show_alert2() {
+	var name1 = document.getElementById('name3').value;
+	var name2 = document.getElementById('name4').value;
+	return alert("Thank You For Submitting " + name1 + " " + name2);
+	
+}
+
 </script>
  
 </html>
