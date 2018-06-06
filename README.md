@@ -1,6 +1,3 @@
 # sam-helloworld
-sam-sampleHTMLpage
 
-Hi Everyone
-I am Ong Chong Kai Samuel
-PUBG Streamer.
+2 Buttons to Hide and Show Form.
